@@ -22,19 +22,22 @@ const colors = [
         textColor: '#FEFAF6'
     },
     {
-        bodyColor:'#8B322C',
-        textColor:'#C5FF95'
+        bodyColor: '#8B322C',
+        textColor: '#C5FF95'
     }
 
 ]
 const btn = document.getElementById('colorBtn');
 const text = document.getElementsByTagName('h1');
 
-let tempValue = 1;
+let tempValue = 4;
+body.style.backgroundColor = colors[tempValue].bodyColor;
+body.style.color = colors[tempValue].textColor;
+btn.style.borderColor = colors[tempValue].textColor;
+btn.style.color = colors[tempValue].textColor;
 btn.addEventListener('click', (e) => {
     e.preventDefault()
     let value = parseInt(Math.random() * 5)
-    console.log(value)
     while (value === tempValue) {
         value = parseInt(Math.random() * 5)
     }
